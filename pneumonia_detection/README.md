@@ -1,5 +1,6 @@
 # Pneumonia detection
 <img src="https://github.com/mikkiRT/Computer_Vision/blob/main/pneumonia_detection/sample_pneumonia.jpeg?raw=true" width="480">
+
 ### Input Data: Chest X-Ray Images (Pneumonia) | ~ 7000 images
 ### Output: binary answer. 0 - normal, 1 - pneumonia
 
