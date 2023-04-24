@@ -7,7 +7,7 @@ from typing import Optional
 from src.data_setup import create_dataloaders
 from src.engine import train
 from src.model_builder import ResNet101
-from src.utils import update_checkpoints_folder
+from src.utils import clean_checkpoints_folder, make_dirs
 from config import Config
 
 configs = Config()
@@ -26,10 +26,12 @@ def main(num_epochs: int = configs.num_epochs,
          batch_size: int = configs.batch_size,
          learning_rate: float = configs.learning_rate,
          pretrained_model_version: Optional[int] = configs.pretrained_model_version):
-    update_checkpoints_folder()
+    make_dirs()
     model = ResNet101().to(device)
     if pretrained_model_version:
         model.load_state_dict(torch.load(f"{configs.checkpoint_folder}/checkpoint_{pretrained_model_version}.pt"))
+    else:
+        clean_checkpoints_folder()
 
     train_dataloader, val_dataloader, class_names = create_dataloaders(train_dir=train_dir,
                                                                        val_dir=val_dir,

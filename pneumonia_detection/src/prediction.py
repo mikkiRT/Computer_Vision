@@ -1,12 +1,14 @@
-import os
 from typing import Optional
 
-from config import Config
+import os
 import torch
 from torch.utils.data import DataLoader
 from torchvision import datasets
 
-from src.model_builder import ResNet101
+from model_builder import ResNet101
+from pneumonia_detection.config import Config
+
+os.chdir("../")
 
 configs = Config()
 
