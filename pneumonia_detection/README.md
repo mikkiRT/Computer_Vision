@@ -5,7 +5,7 @@
 <br />**Output:** binary answer. 0 - normal, 1 - pneumonia
 
 Model: **ResNet101, transfer learning**
-<br />Train | Test accuracy: **91% | 86%**
+<br />Train | Test accuracy: **91% | 88%**
 
 #### The Python scripts in this directory:
 data_setup.py - a file to prepare and download data if needed.
@@ -15,6 +15,7 @@ data_setup.py - a file to prepare and download data if needed.
 <br />utils.py - a file dedicated to helpful utility functions.
 
 **Guideline to use application:**
-<br />1. Specify data in config file
-<br />2. Start training with train.py
-<br />3. Check result model with src/prediction.py
+<br />1. Install requirements.txt: **pip install -r requirements.txt**
+<br />2. Specify data in config file
+<br />3. Start training with train.py
+<br />4. Check result model with src/prediction.py
