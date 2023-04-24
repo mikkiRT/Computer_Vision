@@ -1,0 +1,4 @@
+torch~=2.0.0+cu118
+typing~=3.7.4.3
+torchvision~=0.15.1+cu118
+tqdm~=4.65.0
