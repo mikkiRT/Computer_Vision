@@ -13,3 +13,8 @@ data_setup.py - a file to prepare and download data if needed.
 <br />model_builder.py - a file to create a PyTorch ResNet101 model.
 <br />train.py - a file to leverage all other files and train a target PyTorch model.
 <br />utils.py - a file dedicated to helpful utility functions.
+
+Guideline to use application:
+<br />1. Specify data in config file
+<br />2. Start training with train.py
+<br />3. Check result model with src/prediction.py
