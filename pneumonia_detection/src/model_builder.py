@@ -14,6 +14,7 @@ class ResNet101(nn.Module):
     def __init__(self):
         super().__init__()
         self.weights = torchvision.models.ResNet101_Weights.DEFAULT
+        self.transforms = self.weights.transforms
         self.resnet = torchvision.models.resnet101(weights=self.weights)
 
         for param in self.resnet.parameters():
