@@ -24,7 +24,7 @@ model_transforms = model.transforms()
 
 # Create predict function
 
-def predict(img: Image) -> Tuple[Dict, float]:
+def predict(img) -> Tuple[Dict, float]:
     """
     Transforms and performs a prediction on img and returns prediction and time taken.
     :param img: PIL image
