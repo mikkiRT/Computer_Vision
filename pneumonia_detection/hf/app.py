@@ -62,7 +62,7 @@ description = "A ResNet101 feature extractor computer vision model to detect pne
 article = "Please add chest X-Ray image"
 
 # create examples list from "examples/" directory
-example_list = [["example/" + example] for example in os.listdir("examples")]
+example_list = [["examples/" + example] for example in os.listdir("examples")]
 
 # create the Gradio demo
 demo = gr.Interface(fn=predict,
