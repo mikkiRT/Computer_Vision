@@ -3,7 +3,7 @@ from typing import Optional
 import torch
 from torchvision import transforms
 
-from src.utils import get_transforms
+from pneumonia_detection.src.utils import get_transforms
 
 
 class Config:
