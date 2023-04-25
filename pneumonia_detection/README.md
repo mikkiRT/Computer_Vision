@@ -5,7 +5,7 @@
 <br />**Output:** binary answer. 0 - normal, 1 - pneumonia
 
 Model: **ResNet101, transfer learning**
-<br />Train | Test accuracy: **91% | 88%**
+<br />Train | Test accuracy: **91% | 89%**
 
 #### The Python scripts in this directory:
 data_setup.py - a file to prepare and download data if needed.
