@@ -15,7 +15,6 @@ configs = Config()
 device = configs.device
 
 test_dir = configs.test_dir
-test_transforms = configs.predict_transforms
 
 
 def predict(pretrained_model_version: Optional[int] = None) -> None:
@@ -24,16 +23,15 @@ def predict(pretrained_model_version: Optional[int] = None) -> None:
     :param pretrained_model_version: Version of model state. Saved in "checkpoints" folder
     :return: None
     """
-    test_data = datasets.ImageFolder(root=test_dir, transform=test_transforms)
+    model = ResNet101().to(device)
+    if pretrained_model_version:
+        model.load_state_dict(torch.load(f=f"{configs.checkpoint_folder}/checkpoint_{pretrained_model_version}.pt"))
+    test_data = datasets.ImageFolder(root=test_dir, transform=model.transforms())
     test_dataloader = DataLoader(dataset=test_data,
                                  batch_size=configs.batch_size,
                                  shuffle=False,
                                  num_workers=configs.num_workers,
                                  pin_memory=True)
-
-    model = ResNet101().to(device)
-    if pretrained_model_version:
-        model.load_state_dict(torch.load(f=f"{configs.checkpoint_folder}/checkpoint_{pretrained_model_version}.pt"))
     model.eval()
 
     loss_fn = torch.nn.BCEWithLogitsLoss()
