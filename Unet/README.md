@@ -1,5 +1,5 @@
 # Flood Area Segmentation
-<img src="https://github.com/mikkiRT/Computer_Vision/blob/main/Unet/flood_area.jpeg?raw=true" width="480">
+<img src="https://github.com/mikkiRT/Computer_Vision/blob/main/Unet/flood_area.jpg?raw=true" width="480">
 
 **Input Data:** Flood Images ~ 300 images
 <br />**Output:** binary mask with flood area.
